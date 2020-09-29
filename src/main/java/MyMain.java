@@ -1,6 +1,6 @@
+//Chloe Burrows and I worked together
 import java.util.Arrays;
 public class MyMain {
-
     // Reverses an array
     public static int[] reverse(int[] arr) {
         int len = arr.length;
@@ -20,9 +20,11 @@ public class MyMain {
         for (int i = 1; i < len; i ++) {
             num = Math.max(num, arr[i]);
         }
+        int j = 0;
         for (int i = 0; i < len; i ++ ) {
             if (arr[i] != num) {
-                x[i] = arr[i-1];
+                x[j] = arr[i];
+                j ++;
             }
         }
         int num2 = x[0];
@@ -31,7 +33,6 @@ public class MyMain {
         }
         return num2;
     }
-
     // Checks to see if an array contains a geometric series
     public static boolean isGeometric(int[] arr) {
         double [] x = new double [arr.length-1];
@@ -57,7 +58,7 @@ public class MyMain {
 
 
     public static void main(String[] args) {
-        int z [] = {1, 2, 4, 8, 16, 33};
-        System.out.println((isGeometric(z)));
+        int z [] = {1, 3, 5, 9, 7};
+        System.out.println((secondLargest(z)));
     }
 }
